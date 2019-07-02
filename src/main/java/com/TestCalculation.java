@@ -12,7 +12,7 @@ public class TestCalculation {
 	
 	@Test
 	public void testMatches() {
-		Assert.assertEquals("Hyderabad", "Hyderabad", "String contents are same");
+		Assert.assertEquals("Hyderabad", "Hyderaba", "String contents are same");
 	}
 	
 	@Test
