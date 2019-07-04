@@ -1,37 +1,11 @@
-pipeline {
-   agent any
-   
-   stages {
-      
-      stage ('Clone') {
-            steps {
-                git branch: 'master', url: "https://github.com/reddykonda/SeleniumTestng.git"
-            }
-      }
-        
-      stage ('compile stage') {
-	      steps {
-		     withMaven(maven: 'maven_3_6_0') {
-			    sh 'mvn clean compile'
-			 }
-		  }
-      }
-	  
-	  stage ('Testing Stage') {
-	     steps {
-		    withMaven(maven: 'maven_3_6_0'){
-			   sh 'mvn test'
-			}
-	   }
-     }
-	 
-	 stage ('Deployment Stage') {
-	     steps {
-		    withMaven(maven: 'maven_3_6_0'){
-			   sh 'mvn deploy'
-			}
-	   }
-     }
-	 
-   }
-}   
+node {
+    stage ('checkout'){
+        git 'https://github.com/reddykonda/SeleniumTestng.git'
+    }
+    stage('Mvn package'){
+        def mvnHome = tool name: 'maven_3_6_0', type: 'maven'
+        def mvnCMD = "${mvnHome}/bin/mvn"
+        sh "${mvnCMD} clean package"
+    }
+    
+}
