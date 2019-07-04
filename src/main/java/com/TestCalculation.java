@@ -11,11 +11,6 @@ import org.testng.annotations.Parameters;
 public class TestCalculation {
 	
 	@Test
-	public void testMatches() {
-		Assert.assertEquals("Hyderabad", "Hyderaba", "String contents are same");
-	}
-	
-	@Test
 	public void testUnmatches() {
 		boolean contentsAreSame =  "Hyderabad".equals("Bangalore");
 		Assert.assertFalse(contentsAreSame, "String contents are not same");
@@ -37,6 +32,11 @@ public class TestCalculation {
 	public void subtractionOfTwoNumbers() {
 	    int y = 125-75;
 	    Assert.assertEquals(50, 50);
+	}
+	
+	@Test
+	public void testMatches() {
+		Assert.assertEquals("Hyderabad", "Hyderaba", "String contents are same");
 	}
 	
 	@BeforeTest

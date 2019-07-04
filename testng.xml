@@ -7,6 +7,8 @@
 			value="Home page Nguoi An Phu huyen An Phu tinh An Giang" />
 		<classes>
 			<class name="com.TestCalculation" />
+			<class name="com.TestCalculation2" />
+			<class name="com.TestCalculation3" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
