@@ -17,12 +17,6 @@ public class TestCalculation2 {
 	}
 
 	@Test
-	public void calculateInterest() {
-		int interest = 100000*12*1/100;
-		Assert.assertEquals(interest, 1200, "interest calculation should be correct");
-	}
-	
-	@Test
 	public void additionOfTwoNumbers() {
 	    int y = 125+75;
 	    Assert.assertEquals(200, 200);
@@ -37,6 +31,12 @@ public class TestCalculation2 {
 	@Test
 	public void testMatches() {
 		Assert.assertEquals("Chennai", "Chennai", "String contents are same");
+	}
+	
+	@Test
+	public void calculateInterest() {
+		int interest = 100000*12*1/100;
+		Assert.assertEquals(interest, 1200, "interest calculation should be correct");
 	}
 	
 	@BeforeTest

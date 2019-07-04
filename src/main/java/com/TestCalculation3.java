@@ -23,12 +23,6 @@ public class TestCalculation3 {
 	}
 	
 	@Test
-	public void additionOfTwoNumbers() {
-	    int y = 1250+75;
-	    Assert.assertEquals(y, 200 , "addition of two numbers should be correct");
-	}
-	
-	@Test
 	public void subtractionOfTwoNumbers() {
 	    int y = 125-75;
 	    Assert.assertEquals(50, 50);
@@ -37,6 +31,12 @@ public class TestCalculation3 {
 	@Test
 	public void testMatches() {
 		Assert.assertEquals("Bangalore", "Bangalore", "String contents are same");
+	}
+	
+	@Test
+	public void additionOfTwoNumbers() {
+	    int y = 1250+75;
+	    Assert.assertEquals(y, 200 , "addition of two numbers should be correct");
 	}
 	
 	@BeforeTest
